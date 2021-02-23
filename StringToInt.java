@@ -4,16 +4,33 @@ import java.util.*;
 
 
 public class StringToInt {
+	
+	static int[] TabStrToInt(String[]  tab){
+		int[] tableauInt = new int[tab.length];
+		for(int i = 0; i< tab.length;i++){
+			tableauInt[i]= Integer.parseInt(tab[i]);
+		}
+		return tableauInt;
+	}
+	
+	static int Somme(int[] tab){
+		int somme = 0;
+		for(int i = 0; i< tab.length;i++){
+			somme = somme+ tab[i];
+		}
+		return somme;
+	}
+	
 	public static void main(String[] args){
-		// Entrez le tableau que vous voulez
+		// Entrez le tableau que vous voulez entrée =[1,2,3,4,5]
+		
 		int somme=0;
 		int[] tableauInt = new int[args.length];
 		
+		tableauInt=TabStrToInt(args);
+		somme=Somme(tableauInt);
 		
-		//12°) tableauString --> tableauInt
-		for(int i = 0; i< args.length;i++){
-			tableauInt[i]= Integer.parseInt(args[i]);
-		}
+		
 		
 			//Affiche le tableau avec la classe java.util.Arrays
 			List< String> list = Arrays.asList(args);
@@ -24,9 +41,6 @@ public class StringToInt {
 			for(String name : args)
 			System.out.println(name.toString());
 		
-		for(int i = 0; i< args.length;i++){
-			somme = somme+ Integer.parseInt(args[i]);
-		}
 		System.out.println("La somme du table est " + somme);
 		
 }
