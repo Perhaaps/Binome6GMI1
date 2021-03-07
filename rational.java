@@ -1,7 +1,11 @@
 
-public class rational {int num; int denom;
+public class rational {
+	
+	
+	int num; int denom; // private ?
 
 	
+	// un objet se cr√©e en utilisant le constructeur
 	static rational CreerRational(){
 		rational r = new rational();
 		r.num = 3;
@@ -9,6 +13,7 @@ public class rational {int num; int denom;
 		return(r);
 		
 	}
+	
 	
 	static void AffichageRational(rational r){
 		System.out.println("Le num est "+r.num+" et de denom est "+r.denom);
@@ -70,8 +75,8 @@ public class rational {int num; int denom;
 	}
 	}
 
-// question 3 : C'est un problËme car une division par 0 est impossible 
-// question 4 : on peut mettre une condition sur denom a travers une boucle qui se rÈalisera seulement si denom est diffÈrent de 0 
+// question 3 : C'est un probl√®me car une division par 0 est impossible 
+// question 4 : on peut mettre une condition sur denom a travers une boucle qui se r√©alisera seulement si denom est diff√©rent de 0 
 
 
 
